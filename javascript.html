@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#fish{
+			width:600px;
+			height:500px;
+			background-color:salmon;
+			background-size:contain;}
+	</style>
+</head>
+<body>
+
+	<div id="fish"></div>
+
+	<script type="text/javascript">
+
+		var fish = document.getElementById("fish");
+
+		var fishes = ["url(https://images.boredomfiles.com/wp-content/uploads/sites/7/2018/06/Macskata%CC%81plala%CC%81s.jpg)"];
+
+
+
+		fish.addEventListener("click", function(){
+			randomNumber = Math.round(Math.random()*1)
+
+			fish.style.backgroundImage = fishes[randomNumber]
+
+		});
+
+	</script>
+
+</body>
+</html>
