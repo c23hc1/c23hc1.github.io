@@ -10,12 +10,21 @@
 			background-size: cover;
 			background-repeat: no-repeat;
 
+
+		}
+
+		#button {
+			width: 800px;
+			height: 800px;
+			background-image: url("heart.png");
+
 		}
 	</style>
 	<title>Happy Valentines Day Ella!!!!</title>
 </head>
 <body>
 <div id="candy">
+<div id="button"></div>
 </div>
 
 <script type="text/javascript">
@@ -26,9 +35,18 @@ var puns = [
 ]
 
 var random = Math.round(Math.random()*2);
-var candy=document.getElementById('candy');
+var heart=document.getElementById('candy');
+var button = document.getElementById('button');
 
-	candy.innerText=puns[random];
+button.addEventListener("click",
+	function() {
+		var random = Math.round(Math.random()*3);
+		heart.innerText = puns[random];
+	});
+
+
+
+	heart.innerText=puns[random];
 
 
 

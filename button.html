@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #candies {
+        width: 1000px;
+        height: 800px;
+        background-color: lightblue;
+    }
+
+    #button {
+        width: 170px;
+        height: 150px;
+        background-size: contain;
+        color:red;
+    }
+
+    #text {
+        background-color: pink;
+        position: relative;
+        top: 40%;
+        width: 1000px;
+        height: 200px;
+        background-color: pink;
+        font-size: 100px;
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="candies">
+        <div id="button"></div>
+        <div id="text"></div>
+    </div>
+    <script type="text/javascript">
+    var array = ["love", "like", "beautiful", "friends", "hugs", "snuggles", "bffles"];
+
+
+    var text = document.getElementById('text');
+
+    var button = document.getElementById('button');
+
+
+    button.addEventListener("click",
+        function() {
+            var rando = Math.round(Math.random() * 6);
+
+            text.innerText = array[rando];
+        });
+    </script>
+</body>
+
+</html>
