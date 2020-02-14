@@ -14,39 +14,57 @@
 		}
 
 		#button {
-			width: 800px;
-			height: 800px;
-			background-image: url("heart.png");
+			width: 20px;
+			height: 20px;
+		/*	background-image: url("cactus.png");
+*/			background-color:blue;
+
+		}
+
+		#text{
+			position:relative;
+			left:20%;
+			width:400px;
+			height:200px;
+			top:20%;
+			font-size:20px;
+			background-image:url("funny.png");
+			background: no-repeat;
+			background-size: contain;
 
 		}
 	</style>
 	<title>Happy Valentines Day Ella!!!!</title>
 </head>
 <body>
+
 <div id="candy">
-<div id="button"></div>
+		<div id="button"></div>
+
+		<div id="text"> </div>
+
 </div>
 
 <script type="text/javascript">
 	
 var puns = [
 
-"Jalapeno", "Bell", "Cherry"
+"Jalapeno", "Hes too much of a man", "Pottery buddies", "Alexa and Katie", "pulling my hair and spilling my granola", "spray delay and walk away", "dropping my snowcone", "your fam pantsing me"
 ]
 
-var random = Math.round(Math.random()*2);
 var heart=document.getElementById('candy');
+var text=document.getElementById('text');
+
 var button = document.getElementById('button');
 
 button.addEventListener("click",
 	function() {
-		var random = Math.round(Math.random()*3);
-		heart.innerText = puns[random];
+		var random = Math.round(Math.random()*7);
+		text.innerText = puns[random];
 	});
 
 
 
-	heart.innerText=puns[random];
 
 
 
